@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flowey_0: -8763020939567044277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
