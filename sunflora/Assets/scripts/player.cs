@@ -24,5 +24,15 @@ public class Player : MonoBehaviour
         {
             gameObject.transform.position += new Vector3(velocidade * Time.deltaTime,0,0);
         }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            gameObject.transform.position = new Vector4(velocidade * Time.deltaTime,0,0);
+        }
+
+        
+        
+        
     }
 }
+    
