@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      png-clipart-blue-cloud-art-cloud-computing-cloud-blue-cloud_0: 1060642840979193352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
