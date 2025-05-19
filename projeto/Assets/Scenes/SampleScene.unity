@@ -387,7 +387,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 13
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -412,7 +412,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.25, y: 8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -820,8 +820,8 @@ Transform:
   m_GameObject: {fileID: 962751610}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.97, y: 1.33, z: 0}
-  m_LocalScale: {x: 0.1688275, y: 11.257401, z: 1}
+  m_LocalPosition: {x: -14.4514, y: 7.1679, z: 0}
+  m_LocalScale: {x: -2.7941635, y: 26.931246, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -942,6 +942,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4559fe169d0a1a42bad21d658e00758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 10
 --- !u!4 &1414367527
 Transform:
   m_ObjectHideFlags: 0
@@ -1113,8 +1115,8 @@ Transform:
   m_GameObject: {fileID: 1873617088}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.4771, y: 1.8409, z: 0}
-  m_LocalScale: {x: 0.20842902, y: 11.257401, z: 1}
+  m_LocalPosition: {x: 16.61, y: 5.8564, z: 0}
+  m_LocalScale: {x: 2.6177642, y: 29.239004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1132,6 +1134,7 @@ GameObject:
   - component: {fileID: 1927923610}
   - component: {fileID: 1927923609}
   - component: {fileID: 1927923608}
+  - component: {fileID: 1927923611}
   m_Layer: 0
   m_Name: fmoi700qv9nln97a10kv8af0ac_0
   m_TagString: Untagged
@@ -1203,7 +1206,7 @@ Transform:
   m_GameObject: {fileID: 1927923605}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44, y: 2.51, z: 0}
+  m_LocalPosition: {x: 4.54, y: 4.87, z: 0}
   m_LocalScale: {x: 0.48805985, y: 0.5164, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1284,6 +1287,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f325cf8e15909fd4090a634de5869a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1927923611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927923605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4559fe169d0a1a42bad21d658e00758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpForce: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
