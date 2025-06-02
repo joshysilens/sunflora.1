@@ -1,46 +1,38 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Velocidade de movimento horizontal
-    public float jumpForce = 10f; // Força do pulo
-    private bool isGrounded; // Verifica se o personagem está no chão
+    
+    public float velocidade = 40;
+    public float forcaDoPulo = 4;
+    
+    private SpriteRenderer sprite;
     private Rigidbody2D rb;
-
+    
     void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        // Movimento horizontal
-        float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-
-        // Pulo
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKey(KeyCode.A))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            gameObject.transform.position += new Vector3(-velocidade * Time.deltaTime,0,0);
+            sprite.flipX = true;
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Verifica se o personagem está tocando o chão
-        if (collision.gameObject.CompareTag("Ground"))
+        
+        if (Input.GetKey(KeyCode.D))
         {
-            isGrounded = true;
+            gameObject.transform.position += new Vector3(velocidade * Time.deltaTime,0,0);
+            sprite.flipX = false;
         }
-    }
 
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        // Verifica se o personagem saiu do chão
-        if (collision.gameObject.CompareTag("Ground"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            isGrounded = false;
+            rb.AddForce(new Vector2(0,forcaDoPulo), ForceMode2D.Impulse);
         }
-    }
 
+    }
 }

@@ -2140,8 +2140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4559fe169d0a1a42bad21d658e00758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 10
+  velocidade: 40
+  forcaDoPulo: 4
 --- !u!4 &1414367527
 Transform:
   m_ObjectHideFlags: 0
@@ -2638,8 +2638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4559fe169d0a1a42bad21d658e00758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
-  jumpForce: 23
+  velocidade: 40
+  forcaDoPulo: 20
 --- !u!70 &1927923612
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
